@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "@/assets/styles/globals.css";
 import { APP_NAME } from "@/lib/constants";
-import Header from "@/components/shared/Header/page";
+import Header from "@/components/shared/header/page";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: {
@@ -20,6 +21,7 @@ export default function RootLayout({
     <div className="flex h-screen flex-col">
       <Header />
       <main className="flex-1 wrapper">{children}</main>
+      <Footer />
     </div>
   );
 }
